@@ -10,17 +10,18 @@ public class Actividad4 {
     
     static Scanner scan = new Scanner(System.in);
     /**
-     * @param args the command line arguments
+     * Comprobar contraseña en un máximo de 3 intentos
+     * @return true si contraseña ha sido acertada/false si contraseña no ha sido acertada en ninguno de los intentos
      */
     public static boolean ValidarSuperusuari () {
         boolean acierto = false;
-        final String superpwd = "Argentina#2022!";
-        int intentos = 3;
-        String mensajeintento;
-        String EnterPWD = "Introduce una contraseña: ";
-        String pwd;
+        final String superpwd = "Argentina#2022!"; //Contraseña superusuario
+        int intentos = 3; //Numero de intentos
+        String mensajeintento; //String intentos restantes
+        String EnterPWD = "Introduce una contraseña: "; //String mensaje pedir contraseña
+        String pwd; //Constraseña a introducir
         
-        while (intentos >0 && acierto == false) {
+        while (intentos >0 && acierto == false) { //Si te quedas sin intentos o aciertas termina
             mensajeintento = "Te quedan " + intentos + " intentos";
             System.out.println(mensajeintento);
             System.out.println(EnterPWD);
@@ -32,6 +33,9 @@ public class Actividad4 {
         }
         return acierto;
     }
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         
         boolean pwdtrue;
