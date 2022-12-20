@@ -171,6 +171,18 @@ public static double pedirnumD(String a) {
         num = s.nextInt();
         return num;
     }
+      public static float pedirnumF(String a) {
+        float num;
+        Scanner s = new Scanner(System.in);
+        System.out.print(a);
+        while (!s.hasNextFloat()) {
+            s.next();
+            System.out.println(RED + "ERROR" + RESET);
+            System.out.print(a);
+        }
+        num = s.nextFloat();
+        return num;
+    }
     public static final String RESET = "\033[0m";  // Text Reset
     public static final String RED = "\033[0;31m";  // RED
 // </editor-fold>
